@@ -1,0 +1,27 @@
+Package: ecomod_coastline
+Title: Package that interacts with ecomod and associated projects to provide coastlines. 
+Version: 0.1
+Authors@R: c( person("Jae", "Choi", email="jae.choi@dfo-mpo.gc.ca", role=c("aut", "cre")) ) 
+Description: This project interacts with the functionality of ecomod 
+  to act as a an interface to create and return coastlines. 
+Depends: R (>= 3.0.0)
+Imports: 
+  devtools, 
+  ecomod_base,
+  ecomod_bathymetry, 
+  ecomod_coastline, 
+  ecomod_polygons
+  ecomod_spacetime, 
+  ecomod_utilities, 
+  maps, 
+  mapdata, 
+  maptools, 
+  rgdal, 
+  rgeos
+Suggests: knitr, rmarkdown
+VignetteBuilder: knitr
+License: MIT
+LazyData: true
+URL: https://github.com/jae0/ecomod_coastline/
+
+
