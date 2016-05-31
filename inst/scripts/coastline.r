@@ -1,10 +1,10 @@
 
-  p = list( project.name = "ecomod_coastline" )
+  p = list( project.name = "bio.coastline" )
 
   p$project.root = project.datadirectory( p$project.name )
 
-  p$init.files = ecomodLibrary( "ecomod_spacetime", "ecomod_utilities", "ecomod_bathymetry", "ecomod_coastline", "ecomod_polygons" )
-  p$libs = RLibrary( "rgdal", "maps", "mapdata", "maptools", "geosphere", "sp", "raster", "rgeos" )
+  p$libs = ecomodLibrary( "bio.spacetime", "bio.utilities", "bio.bathymetry", "bio.coastline", "bio.polygons" )
+  p$libs = c(p$libs, RLibrary( "rgdal", "maps", "mapdata", "maptools", "geosphere", "sp", "raster", "rgeos" ) )
 
   # default (= only supported resolution of 0.5 km discretization)  .. do NOT change
   p = spatial.parameters( type="canada.east.highres", p=p )

@@ -3,7 +3,7 @@ coastline.db = function( DS="gshhg coastline highres", crs="+init=epsg:4326", p=
 
   #\\various methods to obtain coastline data
   RLibrary( "maps", "mapdata", "maptools", "rgdal", "rgeos" )
-  datadir = project.datadirectory( "ecomod_coastline" )
+  datadir = project.datadirectory( "bio.coastline" )
   if (! file.exists( datadir) ) dir.create(datadir, showWarnings=FALSE , recursive=TRUE )
 
   if (grepl( "gshhg", DS, ignore.case=TRUE ) ) {
@@ -60,7 +60,7 @@ coastline.db = function( DS="gshhg coastline highres", crs="+init=epsg:4326", p=
     if (is.null(ylim)) stop( "Need lon/lat bounds in p$corners or xlim/ylim" )
     if (!file.exists(fn)) {
       print( "Global Self-consistent, Hierarchical, High-resolution Geography' Database")
-      print( "not found ... Downloading to ecomod_data/ecomod_coastline/ ..." )
+      print( "not found ... Downloading to bio.data/bio.coastline/ ..." )
       coastline.db( DS="gshhg.download")
     }
     print ("Don't panic about  the following .. Rgshhs is just being fussy:")
