@@ -8,7 +8,7 @@ Depends: R (>= 3.0.0)
 Imports: 
   devtools, 
   bio.base,
-  bio.polygons
+  bio.polygons,
   bio.utilities, 
   maps, 
   mapdata, 
