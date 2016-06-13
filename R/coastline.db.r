@@ -2,7 +2,6 @@
 coastline.db = function( DS="gshhg coastline highres", crs="+init=epsg:4326", p=NULL, level=4, xlim=NULL, ylim=NULL, ... ) {
 
   #\\various methods to obtain coastline data
-  RLibrary( "maps", "mapdata", "maptools", "rgdal", "rgeos" )
   datadir = project.datadirectory( "bio.coastline" )
   if (! file.exists( datadir) ) dir.create(datadir, showWarnings=FALSE , recursive=TRUE )
 

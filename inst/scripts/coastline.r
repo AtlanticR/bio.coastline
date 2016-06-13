@@ -1,8 +1,6 @@
 
   p = list( project.name = "bio.coastline" )
-
   p$project.root = project.datadirectory( p$project.name )
-
   p$libs = bioLibrary( "bio.spacetime", "bio.utilities", "bio.bathymetry", "bio.coastline", "bio.polygons" )
   p$libs = c(p$libs, RLibrary( "rgdal", "maps", "mapdata", "maptools", "geosphere", "sp", "raster", "rgeos" ) )
 
@@ -20,8 +18,6 @@
 
   # these are generated on the fly the first pass .. p must contain corner$lon/lat
   # and ensure they are the largest domain for your use (here "canada.east.highres" )
-  p = spatial.parameters( type="canada.east.highres", p=p )
-
   u = coastline.db ( p=p, DS="gshhg coastline full redo", no.clip=TRUE  ) # full is all data
   u = coastline.db ( p=p, DS="gshhg coastline highres redo ", no.clip=TRUE  ) # highres is almost all data
   u = coastline.db ( p=p, DS="gshhg coastline intermediate redo", no.clip=TRUE  ) # medium res
