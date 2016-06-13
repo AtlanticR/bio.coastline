@@ -62,7 +62,7 @@ coastline.db = function( DS="gshhg coastline highres", crs="+init=epsg:4326", p=
       print( "not found ... Downloading to bio.data/bio.coastline/ ..." )
       coastline.db( DS="gshhg.download")
     }
-    print ("Don't panic about  the following .. Rgshhs is just being fussy:")
+    print ("Don't panic about  the following 'error'.. Rgshhs is just being fussy:")
     out = maptools::getRgshhsMap( fn, xlim=xlim + c(-1,1), ylim=ylim+c(-1,1), level=level, verbose=FALSE, ... )
     print ("")
     print ("")
