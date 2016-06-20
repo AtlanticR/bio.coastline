@@ -1,16 +1,9 @@
 
-  p = list( project.name = "bio.coastline" )
-  p$project.root = project.datadirectory( p$project.name )
-  p$libs = bioLibrary( "bio.spacetime", "bio.utilities", "bio.bathymetry", "bio.coastline", "bio.polygons" )
-  p$libs = c(p$libs, RLibrary( "rgdal", "maps", "mapdata", "maptools", "geosphere", "sp", "raster", "rgeos" ) )
-
-  # default (= only supported resolution of 0.5 km discretization)  .. do NOT change
-  p = spatial.parameters( type="canada.east.highres", p=p )
+  p = bio.coastline::coastline.parameters( DS="bio.coastline" )
 
   # worldHires coastlines from mapdata (still pretty crude ..)
   coast = coastline.db( p=p, DS="mapdata.coastLine.redo" ) # flatten into one
   coast = coastline.db( p=p, DS="mapdata.coastPolygon.redo" )
-
 
   # GSHHG coastline data (NOAA) -- best quality data
   # download the current version of the GSHHG coastline data
