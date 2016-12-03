@@ -6,7 +6,7 @@ coastline.parameters = function( DS, p=NULL, resolution="canada.east.highres" ) 
   p$libs = c(p$libs, RLibrary( "rgdal", "maps", "mapdata", "maptools", "geosphere", "sp", "raster", "rgeos" ) )
 
   # default (= only supported resolution of 0.5 km discretization)  .. do NOT change
-  p = spacetime_parameters( type=resolution, p=p )
+  p = spatial_parameters( type=resolution, p=p )
   return(p)
 }
 
